@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+
+{% block title %}contact{% endblock title%}
+
+{% block body %}
+<div class="container my-4">
+    <h1>Contact Us</h1>
+    <form method="POST" action="/contact">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="FirstName" class="form-label">First Name:</label>
+            <input type="text" class="form-control" id="fname" name="FirstName" aria-describedby="emailHelp" placeholder="Enter First Name">
+          </div>
+          <div class="mb-3">
+            <label for="LastName" class="form-label">Last Name:</label>
+            <input type="text" class="form-control" id="lname" name="LastName" aria-describedby="emailHelp" placeholder="Enter Last Name">
+          </div>
+        <div class="mb-3">
+          <label for="Email" class="form-label">Email address:</label>
+          <input type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" placeholder="Enter Your Email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="PhoneNumber" class="form-label">Phone Number:</label>
+          <input type="text" class="form-control" id="phonenumber" name="PhoneNumber" aria-describedby="emailHelp" placeholder="Enter Phone Number">
+        </div>
+        <div class="mb-3">
+          <label for="Password1" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="password" name="Password" placeholder="Enter Your Password">
+        </div>
+        <div class="mb-3">
+          <label for="Password2" class="form-label">Re-Password:</label>
+          <input type="password" class="form-control" id="RePassword" name="RePassword" placeholder="Enter Re-Password" aria-placeholder="Re-Password">
+        </div>
+        <div class="mb-3">
+            <label for="desc">Enter Your Text Here:</label><br>
+            <textarea name="desc" id="txtarea" cols="90" rows="5"></textarea>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Privacy Policy</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+</div>
+{% endblock body %}

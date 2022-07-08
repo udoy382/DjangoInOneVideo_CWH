@@ -1,0 +1,5 @@
+This is a static file
+static file is a public file, this file all content show publickly
+dont add any privet or secure file in static folder
+static folder is use for show anything in publickly
+add to static folder... image / text / css file / js file / html file for share with anyone
